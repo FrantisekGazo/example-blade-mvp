@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'blade'
 
 android {
     compileSdkVersion 25
@@ -24,4 +25,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha2'
     testCompile 'junit:junit:4.12'
+
+    /* Dagger2 ir required dependency for the mvp */
+    compile 'com.google.dagger:dagger:2.10'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.10'
 }
