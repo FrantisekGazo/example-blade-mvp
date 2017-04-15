@@ -1,2 +1,3 @@
 include ':example-mvp-activity'
 include ':example-mvp-fragment'
+include ':example-mvp-view'
