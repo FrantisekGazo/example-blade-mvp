@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import javax.inject.Inject;
 
+import blade.State;
 import blade.mvp.BasePresenter;
 import eu.f3rog.blade.mvp.example.view.ICounterView;
 
@@ -12,7 +13,8 @@ import eu.f3rog.blade.mvp.example.view.ICounterView;
 public final class CounterPresenter
         extends BasePresenter<ICounterView> {
 
-    private int mNumber;
+    @State
+    int mNumber;
 
     @Inject
     public CounterPresenter() {
