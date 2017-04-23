@@ -8,7 +8,7 @@ import blade.Blade;
 import eu.f3rog.blade.mvp.example.R;
 
 
-@Blade
+@Blade // <-- Activity that contains a View with Presenter must be annotated with @Blade
 public final class CounterActivity
         extends AppCompatActivity {
 

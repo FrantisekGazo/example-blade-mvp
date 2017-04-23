@@ -23,7 +23,7 @@ public final class CounterView
         extends LinearLayout
         implements ICounterView {
 
-    @Inject
+    @Inject // <-- just inject the Presenter via dagger2
     CounterPresenter mPresenter;
 
     @BindView(R.id.txt_number)
@@ -46,6 +46,8 @@ public final class CounterView
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         ButterKnife.bind(this);
+
+        // it's recommended to inject the Presenter in onAttachedToWindow()
         Components.getAppComponent().inject(this);
     }
 

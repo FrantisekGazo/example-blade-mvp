@@ -25,7 +25,7 @@ public final class CounterFragment
         extends Fragment
         implements ICounterView {
 
-    @Inject
+    @Inject // <-- just inject the Presenter via dagger2
     CounterPresenter mPresenter;
 
     @BindView(R.id.txt_number)
@@ -41,6 +41,8 @@ public final class CounterFragment
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+
+        // it's recommended to inject the Presenter in or after onCreate()
         Components.getAppComponent().inject(this);
     }
 

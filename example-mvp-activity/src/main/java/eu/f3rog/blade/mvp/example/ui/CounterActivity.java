@@ -19,7 +19,7 @@ public final class CounterActivity
         extends AppCompatActivity
         implements ICounterView {
 
-    @Inject
+    @Inject // <-- just inject the Presenter via dagger2
     CounterPresenter mPresenter;
 
     @BindView(R.id.txt_number)
@@ -31,6 +31,7 @@ public final class CounterActivity
         setContentView(R.layout.activity_counter);
         ButterKnife.bind(this);
 
+        // it's recommended to inject the Presenter in or after onCreate()
         Components.getAppComponent().inject(this);
     }
 
