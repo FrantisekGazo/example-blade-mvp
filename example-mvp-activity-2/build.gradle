@@ -5,7 +5,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "eu.f3rog.blade.mvp.example.v"
+        applicationId "eu.f3rog.blade.mvp.example.a2"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
